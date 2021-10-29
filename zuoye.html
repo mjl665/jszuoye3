@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			{
+				document.write('练习题四第一题');
+				document.write('<br>');
+				let a = '123.45';
+				let b = 'abc.def';
+				let c = '';
+				let d = '';
+				c = a.split('').reverse().join('');
+				d = b.split('').reverse().join('');
+				document.write(`字符串a是：${a}`, '<br>');
+				document.write(`字符串b是：${b}`, '<br>');
+				document.write(`倒序后的a是：${c}`, '<br>');
+				document.write(`倒序后的b是：${d}`);
+				document.write('<hr>')
+			} 
+			{
+				document.write('练习题四第二题');
+				document.write('<br>');
+				let str = '1.2.3.4';
+				let length =str.length;
+				let arr=str.split('');
+				arr[length-1]='*';
+				str=arr.join('');
+				document.write(str);
+				document.write('<hr>');
+			} 
+			{
+				document.write('练习题四第三题');
+				document.write('<br>');
+				let d = new Date();
+				let week = '日一二三四五六'
+				let mon = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+				document.write(
+					`${d.getFullYear()}年${mon[d.getMonth()]}月${d.getDate()}日，${d.getHours()}：${d.getMinutes()}：${d.getSeconds()}，星期${week[d.getDay()]}`
+				);
+				document.write('<hr>')
+			} 
+			{
+				document.write('练习题四第四题');
+				document.write('<br>');
+				let a = '1.2.5.6';
+				document.write(`字符串a是${a}`)
+				document.write('<br>')
+				if (a.length >= 2 && a.length <= 10) {
+					document.write('字符串长度符合要求')
+				} else {
+					document.write('字符串长度不符合要求')
+				}
+				document.write('<hr>')
+			}
+			{
+				document.write('练习题五第二题');
+				document.write('<br>');
+				let a = '';
+
+				function sj(m, n) {
+					let h = Math.floor(Math.random() * (m - n) + n);
+					return h;
+				}
+				for (let i = 1; i <= 4; i++) {
+					let b = sj(0, 10)
+					document.write(b)
+				}
+				document.write('<hr>')
+			}
+			{
+				document.write('拓展1');
+				document.write('<br>');
+				document.write('<hr>')
+			}
+			{
+				document.write('拓展2');
+				document.write('<br>');
+				let para=document.createElement('p');
+				document.body.appendChild(para);
+				function time() {
+					let d = new Date();
+					let week = '日一二三四五六'
+					let mon = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+					let js=(
+						`${d.getFullYear()}年${mon[d.getMonth()]}月${d.getDate()}日，${d.getHours()}：${d.getMinutes()}：${d.getSeconds()}，星期${week[d.getDay()]}`
+					);
+					para.textContent=js;
+				}
+				setInterval(time,1000)
+			}
+		</script>
+	</body>
+</html>
